@@ -1,4 +1,5 @@
 import { resolve } from 'path'
+import fs from 'fs'
 import { defineConfig } from 'vite'
 import Layouts from 'vite-plugin-vue-layouts'
 import Pages from 'vite-plugin-pages'
@@ -18,7 +19,7 @@ const alias = [
   { find: 'vue', replacement: 'vue/dist/vue.esm' },
   {
     find: '@',
-    replacement: resolve(__dirname, ''),
+    replacement: resolve(__dirname, 'src'),
   },
 ]
 
@@ -45,7 +46,10 @@ export default defineConfig({
   server: {
     // 代理
     proxy,
-
+    https: {
+      key: fs.readFileSync('./scripts/localhost-key.pem'),
+      cert: fs.readFileSync('./scripts/localhost.pem'),
+    },
     port: 3003,
     fs: {
       strict: false,
@@ -72,8 +76,10 @@ export default defineConfig({
     PkgConfig(),
     OptimizationPersist(),
     Components({
+      dirs: ['src/components'],
       resolvers: [],
       include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
+      exclude: [/[\\/]node_modules[\\/]/, /[\\/]\.git[\\/]/, /[\\/]\.nuxt[\\/]/],
       dts: true,
     }),
     Inspect(),

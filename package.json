@@ -60,7 +60,7 @@
     "postcss": "^8.0.0"
   },
   "lint-staged": {
-    "**/**.{js,json,vue,ts}": [
+    "src/**/**.{js,json,vue,ts}": [
       "eslint --fix --ignore-path .gitignore",
       "pretty-quick --staged --ignore-path .gitignore"
     ]

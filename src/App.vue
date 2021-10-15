@@ -1,8 +1,6 @@
 <template>
-  <div id="app" class="font-sans">
-    <main>
-      <RouterView />
-    </main>
+  <div id="app" class="font-sans subpixel-antialiased">
+    <RouterView />
   </div>
 </template>
 

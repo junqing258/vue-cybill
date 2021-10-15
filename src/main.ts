@@ -5,6 +5,8 @@ import AddModules from './modules/index'
 import store from './store'
 import App from './App.vue'
 
+import './lib/rem'
+
 // windicss layers
 import 'virtual:windi-base.css'
 import 'virtual:windi-components.css'
@@ -12,7 +14,6 @@ import 'virtual:windi-components.css'
 import 'virtual:windi-utilities.css'
 // windicss devtools support (dev only)
 import 'virtual:windi-devtools'
-import './lib/rem'
 
 Vue.use(VCA)
 

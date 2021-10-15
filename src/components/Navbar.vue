@@ -1,14 +1,9 @@
 <template>
   <header>
-    <ul
-      :default-active="activeIndex"
-      class="el-menu-demo"
-      mode="horizontal"
-      @select="handleSelect"
-    >
-      <li index="0"> home </li>
-      <li index="1"> about </li>
-      <li index="2"> news </li>
+    <ul class="flex space-x-4 bg-opacity-0">
+      <li index="0">home</li>
+      <li index="1">about</li>
+      <li index="2">news</li>
     </ul>
   </header>
 </template>
