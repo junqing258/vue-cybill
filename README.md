@@ -1,4 +1,4 @@
-# vite-vue2-typescript
+# vue-cybill
 
 Vite Vue2 typescript starter template using composition-api with Script Setup!
 
@@ -50,8 +50,6 @@ This repo use `commitizen` , if run `git cz` has no effect, you might need to in
 then use `git cz` to add commit information.
 
 At lint staged it will trigger eslint auto fix and use `pretty-quick` to format files.
-
-And enjoy!
 
 ### Thanks
 

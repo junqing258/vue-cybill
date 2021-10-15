@@ -1,5 +1,5 @@
 {
-  "name": "vite-vue2-typescript",
+  "name": "vue-cybill",
   "private": true,
   "scripts": {
     "postinstall": "husky install",
