@@ -4,11 +4,14 @@
 
 declare module 'vue' {
   export interface GlobalComponents {
-    ButtonOne: typeof import('./src/components/Global/ButtonOne.vue')['default']
-    ButtonTwo: typeof import('./src/components/Global/ButtonTwo.vue')['default']
-    Map: typeof import('./src/components/Map.vue')['default']
-    Navbar: typeof import('./src/components/Navbar.vue')['default']
+    ButtonOne: typeof import('F:/git/vue-cybill/src/components/Global/ButtonOne.vue')['default']
+    ButtonTwo: typeof import('F:/git/vue-cybill/src/components/Global/ButtonTwo.vue')['default']
+    ElMenu: typeof import('element-ui/lib/menu')['default']
+    ElMenuItem: typeof import('element-ui/lib/menu-item')['default']
+    ElTag: typeof import('element-ui/lib/tag')['default']
+    Map: typeof import('F:/git/vue-cybill/src/components/Map.vue')['default']
+    Navbar: typeof import('F:/git/vue-cybill/src/components/Navbar.vue')['default']
   }
 }
 
-export { }
+export {}

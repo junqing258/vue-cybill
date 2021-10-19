@@ -1,10 +1,15 @@
 <template>
   <header>
-    <ul class="flex space-x-4 bg-opacity-0">
-      <li index="0">home</li>
-      <li index="1">about</li>
-      <li index="2">news</li>
-    </ul>
+    <el-menu
+      :default-active="activeIndex"
+      class="el-menu-demo"
+      mode="horizontal"
+      @select="handleSelect"
+    >
+      <el-menu-item index="0"> home </el-menu-item>
+      <el-menu-item index="1"> map </el-menu-item>
+      <el-menu-item index="2"> news </el-menu-item>
+    </el-menu>
   </header>
 </template>
 
@@ -17,7 +22,7 @@ export default defineComponent({
     const activeIndex = ref('0')
 
     const handleSelect = (key: string) => {
-      const routes = ['/', '/about', '/news/1']
+      const routes = ['/', '/map', '/news/1']
       activeIndex.value = key
       const idx = Number(key)
       const path = routes[idx]

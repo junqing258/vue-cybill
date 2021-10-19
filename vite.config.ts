@@ -9,7 +9,7 @@ import Inspect from 'vite-plugin-inspect'
 import OptimizationPersist from 'vite-plugin-optimize-persist'
 import PkgConfig from 'vite-plugin-package-config'
 import Components from 'unplugin-vue-components/vite'
-// import { ElementUiResolver } from 'unplugin-vue-components/resolvers'
+import { ElementUiResolver } from 'unplugin-vue-components/resolvers'
 import WindiCSS from 'vite-plugin-windicss'
 
 const rollupOptions = {}
@@ -27,7 +27,7 @@ const proxy = {}
 
 const define = {
   'process.env.NODE_ENV': '"development"',
-  'precess.env.SITE_NAME': '"同程用车-Momentum"',
+  'process.env.SITE_NAME': '"同程用车-Momentum"',
 }
 
 const esbuild = {}
@@ -77,7 +77,7 @@ export default defineConfig({
     OptimizationPersist(),
     Components({
       dirs: ['src/components'],
-      resolvers: [],
+      resolvers: [ElementUiResolver()],
       include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
       exclude: [/[\\/]node_modules[\\/]/, /[\\/]\.git[\\/]/, /[\\/]\.nuxt[\\/]/],
       dts: true,
