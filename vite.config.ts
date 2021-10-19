@@ -27,7 +27,7 @@ const proxy = {}
 
 const define = {
   'process.env.NODE_ENV': '"development"',
-  'precess.env.SITE_NAME': '"Vite Vue2 App"',
+  'precess.env.SITE_NAME': '"同程用车-Momentum"',
 }
 
 const esbuild = {}
@@ -47,8 +47,8 @@ export default defineConfig({
     // 代理
     proxy,
     https: {
-      key: fs.readFileSync('./scripts/localhost-key.pem'),
-      cert: fs.readFileSync('./scripts/localhost.pem'),
+      key: fs.readFileSync('./scripts/rsa/localhost-key.pem'),
+      cert: fs.readFileSync('./scripts/rsa/localhost.pem'),
     },
     port: 3003,
     fs: {
